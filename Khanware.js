@@ -1,7 +1,7 @@
 const ver = "V1.0";
 let isDev = false;
 
-const repoPath = `https://raw.githubusercontent.com/Lucasmassaroto1/KhanMod/refs/heads/${isDev ? "dev/" : "main/"}`;
+const repoPath = `https://raw.githubusercontent.com/Lucasmassaroto1/KhanMod/main/`;
 
 let device ={
     mobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Windows Phone|Mobile|Tablet|Kindle|Silk|PlayBook|BB10/i.test(navigator.userAgent),
