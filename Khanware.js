@@ -43,24 +43,33 @@ window.featureConfigs ={
 }
 
 //========= SECURITY =========
-document.addEventListener('contextmenu', (e) => !window.disableSecurity && e.preventDefault());
-document.addEventListener('keydown', (e) =>{
-    if(!window.disableSecurity && (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "C", "J"].includes(e.key)))){
-        e.preventDefault();
+document.addEventListener(
+    "contextmenu",
+    (e) => !window.disableSecurity && e.preventDefault()
+);
+document.addEventListener("keydown", (e) => {
+    if (
+    !window.disableSecurity &&
+    (e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "C", "J"].includes(e.key)))
+    ) {
+    e.preventDefault();
     }
 });
-console.log(Object.defineProperties(new Error, {
-    toString:{
-        value(){
-            new Error().stack.includes("toString@"); /*&& location.reload();*/
+console.log(
+    Object.defineProperties(new Error(), {
+    toString: {
+        value() {
+        new Error().stack.includes("toString@"); /*&& location.reload();*/
         },
     },
-    message:{
-        get(){
-            /*location.reload();*/
+    message: {
+        get() {
+        /*location.reload();*/
         },
     },
-}));
+    })
+);
 
 //========= MISC STYLES =========
 document.head.appendChild(
