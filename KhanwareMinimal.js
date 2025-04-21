@@ -265,7 +265,7 @@ function setupMain(){
 
 //========= INJECT =========
 if(!/^https?:\/\/([a-z0-9-]+\.)?khanacademy\.org/.test(window.location.href)){
-    alert("❌ Khanware Failed to Injected!\n\nVocê precisa executar o Khanware no site do Khan Academy! (https://pt.khanacademy.org/)");
+    alert("❌ KhanMode Failed to Injected!\n\nVocê precisa executar o KhanMode no site do Khan Academy! (https://pt.khanacademy.org/)");
     window.location.href = "https://pt.khanacademy.org/";
 }
 
@@ -284,7 +284,7 @@ loadCss(
 );
 loadScript("https://cdn.jsdelivr.net/npm/toastify-js", "toastifyPlugin").then(
     async () =>{
-    sendToast("🪶 Khanware Minimal injetado com sucesso!");
+    sendToast("🪶 KhanMode Minimal injetado com sucesso!");
 
     playAudio(
         "https://r2.e-z.host/4d0a0bea-60f8-44d6-9e74-3032a64a9f32/gcelzszy.wav"
